@@ -202,7 +202,7 @@ a{
   color:#b6bcaa
 }
 .art-initials{
-  font:700 110px/.9 'Manrope',sans-serif;
+  font:700 118px/.9 'Manrope',sans-serif;
   letter-spacing:-10px;
   color:var(--accent)
 }
@@ -431,7 +431,7 @@ footer>a:last-child:hover{
   width:200px
 }
 .art-initials{
-  font-size:88px
+  font-size:94px
 }
 .hero-index{
   bottom:20px
