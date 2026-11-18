@@ -1,7 +1,7 @@
 // Ubah isi file ini untuk memperbarui informasi CV.
 export const profile = {
-  name: 'Hanifan Octoza Al F.',
-  initials: 'HO',
+  name: 'Hanifan Octoza Al Fadli',
+  initials: 'HOAF',
   role: 'CV & Portofolio',
   location: '',
   email: '',
