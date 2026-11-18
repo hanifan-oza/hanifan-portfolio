@@ -11,7 +11,7 @@ function ContactLink({ href, children, label }) {
 function Header() {
   return (
     <header className="topbar">
-      <a className="wordmark" href="#home" aria-label="Kembali ke halaman utama">HO<span>.</span></a>
+      <a className="wordmark" href="#home" aria-label="Kembali ke halaman utama">HOAF<span></span></a>
       <nav aria-label="Navigasi utama">
         <a href="#tentang">Tentang</a>
         <a href="#pengalaman">Pengalaman</a>
@@ -38,8 +38,10 @@ function Hero() {
       </div>
       <div className="hero-art" aria-label="Inisial Hanifan Octoza Al F.">
         <div className="art-ring ring-one" /><div className="art-ring ring-two" />
-        <div className="art-card"><span className="art-label">PORTOFOLIO<br />&amp; KURIKULUM VITAE</span><span className="art-initials">{profile.initials}</span><span className="art-index">INDONESIA · 2026</span></div>
-        <span className="art-star">✳</span>
+        <div className="art-card"><span className="art-label">PORTOFOLIO<br />&amp; KURIKULUM VITAE</span>
+          <span className="art-initials">{profile.initials}</span><span className="art-index">Jawa Barat · Indonesia</span>
+        </div>
+        <span className="art-star"></span>
       </div>
       <span className="hero-index">01 / PROFIL</span>
     </section>
@@ -77,7 +79,8 @@ function Contact() {
     <section className="contact-section" id="kontak">
       <div><p className="eyebrow">04 — KONTAK</p><h2>Mari kita mulai<br /><em>percakapan.</em></h2></div>
       <div className="contact-links">
-        <ContactLink href={profile.email ? `mailto:${profile.email}` : ''} label="Kirim email">Email</ContactLink>
+        <ContactLink href={profile.email ? `mailto:${profile.email}` : ''} label="Kirim email">{profile.email}</ContactLink>
+        <ContactLink href={profile.phone ? `tel:${profile.phone.replace(/\s/g, '')}` : ''} label="Telepon Hanifan">{profile.phone}</ContactLink>
         <ContactLink href={profile.linkedin} label="Buka LinkedIn">LinkedIn</ContactLink>
         <ContactLink href={profile.website} label="Buka situs web">Situs web</ContactLink>
       </div>
@@ -97,7 +100,7 @@ export default function App() {
         {profile.projects.length > 0 && <TimelineSection id="proyek" number="04" eyebrow="KARYA PILIHAN" title="Proyek" items={profile.projects} emptyLabel="" />}
         <Contact />
       </main>
-      <footer><a className="wordmark" href="#home">HO<span>.</span></a><p>© 2026 {profile.name}</p><a href="#home">Kembali ke atas ↑</a></footer>
+      <footer><a className="wordmark" href="#home">HOAF<span></span></a><p>© 2026 {profile.name}</p><a href="#home">Kembali ke atas ↑</a></footer>
     </div>
   );
 }
